@@ -1,1 +1,25 @@
-<h1>About Us called</h1>
+{% extends './base.html' %}
+{% load static %}
+{% block content %}
+<h1>
+    {% if 'isActive' %}
+    <h1>
+        Is active is True
+    </h1>
+    {% else %}
+    <h1>
+        Is active is False
+    </h1>
+    {% endif %}
+    {% if age > 18 %}
+        <p>
+            User is eligible.....
+        </p>
+        {% else %}
+        <p>
+            User is not eligible.....
+        </p>
+    {% endif %}
+</h1>
+
+{% endblock content %}

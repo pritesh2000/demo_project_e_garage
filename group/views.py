@@ -8,10 +8,21 @@ def group(request):
     return HttpResponse("Group is called...")
 
 def contactUs(request):
-    return render(request, 'group/contactUs.html')
+    context = {
+        'contact_name' : ["Pritesh", "Sharad", "Ashish", "Yash", "Anil"]
+    }
+    return render(request, 'group/contactUs.html', context)
 
 def index(request):
-    return render(request, 'group/index.html')
+    context = {
+        'name' : 'E-GARAGE'
+    }
+    return render(request, 'group/index.html', context)
 
 def aboutUs(request):
-    return render(request, 'group/aboutUs.html')
+    context = {
+        'isActive' : True,
+        'age' : 20
+    }
+    return render(request, 'group/aboutUs.html', context)
+    

@@ -1,3 +1,15 @@
+{% extends './base.html' %}
+{% block content %}
+{% load static %}
 <h1>Contact Us called....</h1>
+<ul>
 
-<a href="../add">Add</a>
+    {% for i in contact_name %}
+    <li>
+        {{i}}
+    </li>
+
+    {% endfor %}
+
+</ul>
+{% endblock content %}
