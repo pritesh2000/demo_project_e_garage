@@ -16,12 +16,12 @@ class ViewTicket(TemplateView):             # template view is not taught yet.
     model = Ticket    
     punch = model.objects.all().values()
     template_name = 'ticket/ticket.html'
-    print(punch)
-    print('hello')
+    # print(punch)
+    # print('hello')
     # context_object_name = 'viewticket'
     list1 = []
     for j in range(len(punch)):
         for i in punch[j].values():
             list1.append(i)
     
-    print(list1)
+    # print(list1)

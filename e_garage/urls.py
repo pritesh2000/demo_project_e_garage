@@ -25,6 +25,9 @@ urlpatterns = [
     path('employee/', include('employee.urls')),
     path('owner/', include('owner.urls')),
     path('ticket/', include('ticket.urls')),
-    path('task/', include('task.urls'))
+    path('task/', include('task.urls')),
+    path('serviceprovider/', include('serviceprovider.urls')),
+    path('core/', include('core.urls')),
+    path('simpleform/', include('simpleform.urls')),
 
 ]

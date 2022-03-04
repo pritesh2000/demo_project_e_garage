@@ -53,11 +53,11 @@ class Order(models.Model):
     STATUS = (
         ('pending', 'pending'),('processing', 'processing'), ('completed', 'completed')
     )
-    customer = models.ForeignKey(Customer, null=True, on_delete=models.SET_NULL)
-    product = models.ForeignKey(Product, null=True, on_delete=models.SET_NULL)
+    customer = models.ForeignKey(Customer,null=True, on_delete=models.SET_NULL)
+    product = models.ForeignKey(Product,null=True, on_delete=models.SET_NULL)
     data_created = models.DateTimeField(auto_now_add=True, null=True)
     STATUS = models.CharField(max_length=200, choices=STATUS)
 
 
     class Meta:
-        db_table = 'order'
+        db_table = 'order_details'

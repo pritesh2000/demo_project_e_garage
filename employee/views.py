@@ -24,3 +24,4 @@ def updateEmployee(request):
     emp.econtact = 987654321
     emp.save()
     return HttpResponse("Employee updated...")
+    
