@@ -29,5 +29,6 @@ urlpatterns = [
     path('serviceprovider/', include('serviceprovider.urls')),
     path('core/', include('core.urls')),
     path('simpleform/', include('simpleform.urls')),
+    path('cart/', include('cart.urls')),
 
 ]
