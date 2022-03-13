@@ -8,6 +8,4 @@ urlpatterns = [
     path('<int:pk>/view/', DetailServiceProvider.as_view(), name = 'detail_serviceprovider'),
     path('<int:pk>/delete/', DeleteServiceProvider.as_view(), name = 'delete_serviceprovider'),
     path('<int:pk>/update/', UpdateServiceProvider.as_view(), name = 'update_serviceprovider'),
-    
-
 ]

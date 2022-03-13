@@ -30,5 +30,6 @@ urlpatterns = [
     path('core/', include('core.urls')),
     path('simpleform/', include('simpleform.urls')),
     path('cart/', include('cart.urls')),
+    path('user/', include('userapp.urls')),
 
 ]

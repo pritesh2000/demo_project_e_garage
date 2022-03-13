@@ -17,7 +17,6 @@ class DeleteTask(DeleteView):
 def index(request):        
     return render(request, 'task/index.html')
 
-
 class UpdateTask(UpdateView):
     model = Task 
     fields = ['task_name', 'task_discription']
