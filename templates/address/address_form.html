@@ -5,12 +5,11 @@
 
 </head>
 <body>
-    <form>
+    <form method="post">
         {% csrf_token %}
         {{form | crispy}}
         <button type= 'Submit'>Submit</button>
+
     </form>
-
-
 </body>
 </html>

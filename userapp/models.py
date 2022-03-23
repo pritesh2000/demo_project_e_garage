@@ -10,7 +10,7 @@ from django.core.validators import RegexValidator
 # Create your models here.
 class Role(models.Model):
     role_id = models.AutoField(primary_key=True, unique=True)
-    role_name = models.CharField(max_length=50, unique=True)
+    role_name = models.CharField(max_length=150, unique=True)
 
     class Meta():
         db_table = 'Role'
@@ -19,15 +19,15 @@ class Role(models.Model):
 class User(AbstractUser):
     
     user_id = models.AutoField(primary_key=True)
-    username = models.CharField(max_length=30, unique= True)
-    print("first")
+    username = models.CharField(max_length=130, unique= True)
+    # print("first")
     first_name = models.CharField(max_length=150)
-    print("last")
-    last_name = models.CharField(max_length=50)
-    print("password")
-    password = models.CharField(max_length=50) 
-    print("email")
-    email = models.EmailField(_('email') ,max_length=50, unique=True)
+    # print("last")
+    last_name = models.CharField(max_length=150)
+    # print("password")
+    password = models.CharField(max_length=150) 
+    # print("email")
+    email = models.EmailField(_('email') ,max_length=150, unique=True)
     
     phone_regex = RegexValidator(regex=r'^[6-9]{1}\d{9}', message='Phone number must be in the format : 9999999999')
     mobile_number = models.CharField(validators=[phone_regex], blank=True, unique=True ,max_length=10)
@@ -36,7 +36,7 @@ class User(AbstractUser):
     updated_at = models.DateTimeField(auto_now=True)
     is_delete = models.BooleanField(default=False)
 
-    role_id = models.ForeignKey(Role, on_delete=models.CASCADE)
+    role = models.ForeignKey(Role, on_delete=models.CASCADE)
 
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = ['email']

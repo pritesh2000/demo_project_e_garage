@@ -8,5 +8,6 @@ from django.views.generic.edit import CreateView
 
 class CreateAddress(CreateView):
     form_class = AddressForm
-    model = Address
+    # model = Address
     template_name = 'address/address_form.html'
+    success_url = '/ticket/view'

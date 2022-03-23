@@ -96,7 +96,7 @@ WSGI_APPLICATION = 'e_garage.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'internship_e_garage',
+        'NAME': 'internship_e_garage1',
         'USER':'postgres',
         'PASSWORD': '1234',
         'HOST': 'localhost',

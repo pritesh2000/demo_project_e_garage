@@ -29,4 +29,3 @@ class UserLoginView(LoginView):
 
 def index(request):
     return render(request, 'user/index.html')
-

@@ -1,9 +1,8 @@
 <h1>Ticket is created</h1>
 <h2>FINE</h2>
 <form method = "POST">
-    {% csrf_token %}
-    {{form.as_p}}
-{% for i in list1 %}
+
+{% for i in viewticket %}
     <li>
     {{i}}
     </li>
